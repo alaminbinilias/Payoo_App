@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Taliwind_CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!--End_Taliwind_Cdn--->
+    <title>Payoo App</title>
+</head>
+<body class="bg-[#f4f5f7] h-[100vh] flex flex-col items-center justify-center">
+
+    <div class=" flex justify-center items-center h-[150px] w-[300px] bg-[url('./assets/bg.png')] bg-no-repeat bg-cover">
+        <div class="">
+            <img src="./assets/Group.png" alt="">
+        </div>
+    </div>
+    <form class="bg-white p-4 w-[350px] rounded-lg" action="" >
+        <div class="my-4">
+            <label class="text-[16px] font-medium" for="">Mobile Number</label>
+            <br>
+            <input id="mobile_number" type="text" placeholder="Enter Your Number" class="input mt-2 rounded-[32px] bg-[#f4f5f7]" />
+        </div>
+
+        <div class="my-3">
+            <label class="text-[16px] font-medium" for="">4 Digit Pin</label>
+            <br>
+            <input id="pin_number" type="text" placeholder="Enter 4 Digit Pin" class="input mt-2 rounded-[32px] bg-[#f4f5f7]" />
+        </div>
+        <button id="login_btn" class="btn btn-primary w-full mb-3 rounded-[32px]">Login</button>
+    </form>
+    <script src="./script/script.js"></script>
+</body>
+</html>
