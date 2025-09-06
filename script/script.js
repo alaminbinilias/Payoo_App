@@ -27,5 +27,10 @@ document.getElementById('login_btn')
         }
         else{
             alert("Please Enter Your Correct Credential");
+            //console.log("Accept");
+            document.getElementById('mobile_number').value="";
+            document.getElementById('pin_number').value="";
+            //PhoneNumber="";
+            //PinNumber="";
         }
     });
