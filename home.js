@@ -45,8 +45,80 @@ document.getElementById('home_btn')
             convertTotalTaka+=convertMoney;
             document.getElementById('total').innerText=convertTotalTaka;
             //console.log(totalTaka);
+
+            document.getElementById('add_money').value='';
+            document.getElementById('Add_for_Pin').value='';
+            document.getElementById('ac_Number').value='';
         }
         else{
             alert("Enter Your Correct Pin or A/C Number");
         }
     });
+
+
+
+    ////CashOut option
+
+    document.getElementById('cash_out')
+        .addEventListener('click',function(){
+            //console.log("Cashout Button Connected");
+            document.getElementById('csh_out').style.display='block';
+            document.getElementById('ad_money').style.display='none';
+        });
+
+        document.getElementById('mny')
+        .addEventListener('click',function(){
+            //console.log("Cashout Button Connected");
+            document.getElementById('ad_money').style.display='block';
+            document.getElementById('csh_out').style.display='none';
+        });
+
+
+        ///withdraw
+        document.getElementById('withDrawBtn')
+            .addEventListener('click',function(event){
+                event.preventDefault();
+                //console.log("WithDraw Button Connected");
+                
+                //Account number collect
+                accunt_number=document.getElementById("withDrawAc").value;
+                //console.log(accunt_number);
+
+                if(accunt_number.length<11||isNaN(accunt_number)){
+                    alert("Incorrect A/C Number");
+                    return;
+                }
+
+                withDrawAmount=document.getElementById('withAmount').value;
+                //console.log(withDrawAmount);
+
+                totalTaka=document.getElementById('total').innerText;
+                //console.log(totalTaka);
+
+                //pin_Number_check
+                WPin=document.getElementById('withdrawPin').value;
+                //console.log(WPin);
+                if(WPin!=='123'){
+                    alert("please Enter Your Correct Pin");
+                    document.getElementById("withDrawAc").value="";
+                    document.getElementById('withAmount').value="";
+                    document.getElementById('withdrawPin').value="";
+                    return;
+                }
+
+                convertTotalTaka=parseInt(totalTaka);
+                if(convertTotalTaka>=withDrawAmount){
+                    convertTotalTaka-=withDrawAmount;
+                    document.getElementById('total').innerText=convertTotalTaka;
+                    document.getElementById("withDrawAc").value="";
+                    document.getElementById('withAmount').value="";
+                    document.getElementById('withdrawPin').value="";
+
+                }
+                else{
+                    alert("Insufficient Balance. Please check your Balance First");
+                    document.getElementById("withDrawAc").value="";
+                    document.getElementById('withAmount').value="";
+                    document.getElementById('withdrawPin').value="";
+                }
+            });
