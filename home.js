@@ -64,6 +64,9 @@ document.getElementById('home_btn')
             //console.log("Cashout Button Connected");
             document.getElementById('csh_out').style.display='block';
             document.getElementById('ad_money').style.display='none';
+            document.getElementById('snd_money').style.display='none';
+            document.getElementById('bonus').style.display='none';
+            document.getElementById('payBill').style.display='none';
         });
 
         document.getElementById('mny')
@@ -71,6 +74,9 @@ document.getElementById('home_btn')
             //console.log("Cashout Button Connected");
             document.getElementById('ad_money').style.display='block';
             document.getElementById('csh_out').style.display='none';
+            document.getElementById('snd_money').style.display='none';
+            document.getElementById('bonus').style.display='none';
+            document.getElementById('payBill').style.display='none';
         });
 
 
@@ -122,3 +128,34 @@ document.getElementById('home_btn')
                     document.getElementById('withdrawPin').value="";
                 }
             });
+
+            //Tranfer Money
+
+            document.getElementById("transferMoney")
+                .addEventListener('click',function(){
+                    document.getElementById('ad_money').style.display='none';
+                    document.getElementById('csh_out').style.display='none';
+                    document.getElementById('snd_money').style.display='block';
+                    document.getElementById('bonus').style.display='none';
+                    document.getElementById('payBill').style.display='none';
+                });
+
+            ///Get Bonus
+            document.getElementById('GetBonus')
+                .addEventListener('click',function(){
+                    document.getElementById('bonus').style.display='Block';
+                    document.getElementById('ad_money').style.display='none';
+                    document.getElementById('csh_out').style.display='none';
+                    document.getElementById('snd_money').style.display='none';
+                    document.getElementById('payBill').style.display='none';
+                });
+
+            ///Pay Bill
+            document.getElementById('Bill')
+                .addEventListener('click',function(){
+                    document.getElementById('bonus').style.display='none';
+                    document.getElementById('ad_money').style.display='none';
+                    document.getElementById('csh_out').style.display='none';
+                    document.getElementById('snd_money').style.display='none';
+                    document.getElementById('payBill').style.display='block';
+                });

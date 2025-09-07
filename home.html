@@ -44,15 +44,15 @@
             <img class="mx-auto mb-3" src="./assets/send1.png" alt="">
             <p class="text-center font-medium">Cashout</p>
         </div>
-        <div class="border-2 border-gray-200 px-[20px] py-[25px] rounded-lg cursor-pointer">
+        <div id="transferMoney" class="border-2 border-gray-200 px-[20px] py-[25px] rounded-lg cursor-pointer">
             <img class="mx-auto mb-3" src="./assets/money1.png" alt="">
             <p class="text-center font-medium">Tranfer Money</p>
         </div>
-        <div class="border-2 border-gray-200 px-[20px] py-[25px] rounded-lg cursor-pointer">
+        <div id="GetBonus" class="border-2 border-gray-200 px-[20px] py-[25px] rounded-lg cursor-pointer">
             <img class="mx-auto mb-3" src="./assets/bonus1.png" alt="">
             <p class="text-center font-medium">Get Bonus</p>
         </div>
-        <div class="border-2 border-gray-200 px-[20px] py-[25px] rounded-lg cursor-pointer">
+        <div id="Bill" class="border-2 border-gray-200 px-[20px] py-[25px] rounded-lg cursor-pointer">
             <img class="mx-auto mb-3" src="./assets/purse1.png" alt="">
             <p class="text-center font-medium">Pay Bill</p>
         </div>
@@ -62,6 +62,9 @@
             </div>
         </div>
     </div>
+
+
+    <!-- Add Money -->
 
     <div id="ad_money" style="" class="max-w-lg mx-auto">
         <p class="mt-[25px] font-bold text-[18px] mb-5">Add Money</p>
@@ -119,6 +122,81 @@
                 <input id="withdrawPin" placeholder="Enter 3 digit pin number" class="input bg-[#f4f5f7] mt-2 mb-4 rounded-full p-5 w-full" />
             </div>
             <button id="withDrawBtn" class="btn btn-primary mt-2 rounded-full py-[14px] w-full">Withdraw Money</button>
+        </div>
+    </div>
+
+
+    <!-- send_Money_Form -->
+
+    <div id="snd_money" style="display:none;" class="max-w-lg mx-auto">
+        <p class="mt-[25px] font-bold text-[18px] mb-5">Transfer Money</p>
+        <div class="bg-white p-6  rounded-2xl">
+            <div>
+                <label class="text-[16px] font-semibold" for="">User Account Number</label>
+                <br>
+                <input placeholder="Enter 11 digit number" class="input bg-[#f4f5f7] mt-2 mb-4 rounded-full p-5 w-full" />
+            </div>
+            <div>
+                <label class="text-[16px] font-semibold" for="">Amount</label>
+                <br>
+                <input placeholder="Enter amount to transfer" class="input bg-[#f4f5f7] mt-2 mb-4 rounded-full p-5 w-full" />
+            </div>
+            <div>
+                <label class="text-[16px] font-semibold" for="">Pin Number</label>
+                <br>
+                <input placeholder="Enter 3 digit pin number" class="input bg-[#f4f5f7] mt-2 mb-4 rounded-full p-5 w-full" />
+            </div>
+            <button class="btn btn-primary mt-2 rounded-full py-[14px] w-full">Send Now</button>
+        </div>
+    </div>
+
+    <!-- Get Bonus Form -->
+
+    <div id="bonus" style="display:none;" class="max-w-lg mx-auto">
+        <p class="mt-[25px] font-bold text-[18px] mb-5">Get Bonus</p>
+        <div class="bg-white p-6  rounded-2xl">
+            <div>
+                <label class="text-[16px] font-semibold" for="">Enter Bonus Coupon</label>
+                <br>
+                <input placeholder="Enter your coupon" class="input bg-[#f4f5f7] mt-2 mb-4 rounded-full p-5 w-full" />
+            </div>
+            <button class="btn btn-primary mt-2 rounded-full py-[14px] w-full">Get Bonus</button>
+        </div>
+    </div>
+
+
+    <!-- Pay Bill -->
+     <div id="payBill" style="display: none;" class="max-w-lg mx-auto">
+        <p class="mt-[25px] font-bold text-[18px] mb-5">Pay Bill</p>
+        <div class="bg-white p-6  rounded-2xl">
+            <div>
+                <form action="">
+                    <label class="text-[16px] font-semibold" for="">Select To Pay</label>
+                    <br>
+                    <select class="select mt-2 bg-[#f4f5f7] mb-4 rounded-full  w-full">
+                        <option id="option_mnu" selected>Select Bank</option>
+                        <option>AB Bank</option>
+                        <option>Islami Bank</option>
+                        <option>Dutch Bangla Bank</option>
+                    </select>
+                </form>
+            </div>
+            <div>
+                <label class="text-[16px] font-semibold" for="">Biller Account Number</label>
+                <br>
+                <input id="ac_Number" required placeholder="Enter account number" class="input bg-[#f4f5f7] mt-2 mb-4 rounded-full p-5 w-full" />
+            </div>
+            <div>
+                <label class="text-[16px] font-semibold" for="">Amount to Pay</label>
+                <br>
+                <input id="add_money" placeholder="Add Amount to Pay" class="input bg-[#f4f5f7] mt-2 mb-4 rounded-full p-5 w-full" />
+            </div>
+            <div>
+                <label class="text-[16px] font-semibold" for="">Pin Number</label>
+                <br>
+                <input id="Add_for_Pin" placeholder="Enter 3 digit pin number" class="input bg-[#f4f5f7] mt-2 mb-4 rounded-full p-5 w-full" />
+            </div>
+            <button id="home_btn" class="btn btn-primary mt-2 rounded-full py-[14px] w-full">Add Money</button>
         </div>
     </div>
 
