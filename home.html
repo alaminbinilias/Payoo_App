@@ -36,27 +36,27 @@
      </div>
 
      <div class="max-w-lg mx-auto mt-[20px] grid grid-cols-3 gap-3 pb-6">
-        <div id="mny" class="border-2 border-gray-200 px-[20px] py-[25px] rounded-lg cursor-pointer">
+        <div id="mny" class="border-2 border-gray-200 px-[20px] py-[25px] rounded-lg cursor-pointer btnclass">
             <img class="mx-auto mb-3" src="./assets/wallet1.png" alt="">
             <p class="text-center font-medium">Add Money</p>
         </div>
-        <div id="cash_out" class=" border-2 border-gray-200 px-[20px] py-[25px] rounded-lg cursor-pointer">
+        <div id="cash_out" class=" border-2 border-gray-200 px-[20px] py-[25px] rounded-lg cursor-pointer btnclass">
             <img class="mx-auto mb-3" src="./assets/send1.png" alt="">
             <p class="text-center font-medium">Cashout</p>
         </div>
-        <div id="transferMoney" class="border-2 border-gray-200 px-[20px] py-[25px] rounded-lg cursor-pointer">
+        <div id="transferMoney" class="border-2 border-gray-200 px-[20px] py-[25px] rounded-lg cursor-pointer btnclass">
             <img class="mx-auto mb-3" src="./assets/money1.png" alt="">
             <p class="text-center font-medium">Tranfer Money</p>
         </div>
-        <div id="GetBonus" class="border-2 border-gray-200 px-[20px] py-[25px] rounded-lg cursor-pointer">
+        <div id="GetBonus" class="border-2 border-gray-200 px-[20px] py-[25px] rounded-lg cursor-pointer btnclass">
             <img class="mx-auto mb-3" src="./assets/bonus1.png" alt="">
             <p class="text-center font-medium">Get Bonus</p>
         </div>
-        <div id="Bill" class="border-2 border-gray-200 px-[20px] py-[25px] rounded-lg cursor-pointer">
+        <div id="Bill" class="border-2 border-gray-200 px-[20px] py-[25px] rounded-lg cursor-pointer btnclass">
             <img class="mx-auto mb-3" src="./assets/purse1.png" alt="">
             <p class="text-center font-medium">Pay Bill</p>
         </div>
-            <div class="border-2 border-gray-200 px-[20px] py-[25px] rounded-lg cursor-pointer">
+            <div class="border-2 border-gray-200 px-[20px] py-[25px] rounded-lg cursor-pointer btnclass">
                 <img class="mx-auto mb-3" src="./assets/transaction1.png" alt="">
                 <p class="text-center font-medium">Transactions</p>
             </div>
@@ -66,7 +66,7 @@
 
     <!-- Add Money -->
 
-    <div id="ad_money" style="" class="max-w-lg mx-auto">
+    <div id="ad_money" style="" class="max-w-lg mx-auto forms">
         <p class="mt-[25px] font-bold text-[18px] mb-5">Add Money</p>
         <div class="bg-white p-6  rounded-2xl">
             <div>
@@ -103,7 +103,7 @@
 
     <!-- cash_out form -->
 
-    <div id="csh_out" style="display: none;" class="max-w-lg mx-auto">
+    <div id="csh_out" style="display: none;" class="max-w-lg mx-auto forms">
         <p class="mt-[25px] font-bold text-[18px] mb-5">Cash Out</p>
         <div class="bg-white p-6  rounded-2xl">
             <div>
@@ -128,45 +128,45 @@
 
     <!-- send_Money_Form -->
 
-    <div id="snd_money" style="display:none;" class="max-w-lg mx-auto">
+    <div id="snd_money" style="display:none;" class="max-w-lg mx-auto forms">
         <p class="mt-[25px] font-bold text-[18px] mb-5">Transfer Money</p>
         <div class="bg-white p-6  rounded-2xl">
             <div>
                 <label class="text-[16px] font-semibold" for="">User Account Number</label>
                 <br>
-                <input placeholder="Enter 11 digit number" class="input bg-[#f4f5f7] mt-2 mb-4 rounded-full p-5 w-full" />
+                <input id="TAccountNumber" placeholder="Enter 11 digit number" class="input bg-[#f4f5f7] mt-2 mb-4 rounded-full p-5 w-full" />
             </div>
             <div>
-                <label class="text-[16px] font-semibold" for="">Amount</label>
+                <label  class="text-[16px] font-semibold" for="">Amount</label>
                 <br>
-                <input placeholder="Enter amount to transfer" class="input bg-[#f4f5f7] mt-2 mb-4 rounded-full p-5 w-full" />
+                <input id="Tamount" placeholder="Enter amount to transfer" class="input bg-[#f4f5f7] mt-2 mb-4 rounded-full p-5 w-full" />
             </div>
             <div>
                 <label class="text-[16px] font-semibold" for="">Pin Number</label>
                 <br>
-                <input placeholder="Enter 3 digit pin number" class="input bg-[#f4f5f7] mt-2 mb-4 rounded-full p-5 w-full" />
+                <input id="Tpin" placeholder="Enter 3 digit pin number" class="input bg-[#f4f5f7] mt-2 mb-4 rounded-full p-5 w-full" />
             </div>
-            <button class="btn btn-primary mt-2 rounded-full py-[14px] w-full">Send Now</button>
+            <button id="TBtn" class="btn btn-primary mt-2 rounded-full py-[14px] w-full">Send Now</button>
         </div>
     </div>
 
     <!-- Get Bonus Form -->
 
-    <div id="bonus" style="display:none;" class="max-w-lg mx-auto">
+    <div id="bonus" style="display:none;" class="max-w-lg mx-auto forms">
         <p class="mt-[25px] font-bold text-[18px] mb-5">Get Bonus</p>
         <div class="bg-white p-6  rounded-2xl">
             <div>
                 <label class="text-[16px] font-semibold" for="">Enter Bonus Coupon</label>
                 <br>
-                <input placeholder="Enter your coupon" class="input bg-[#f4f5f7] mt-2 mb-4 rounded-full p-5 w-full" />
+                <input id="inpCupons" placeholder="Enter your coupon" class="input bg-[#f4f5f7] mt-2 mb-4 rounded-full p-5 w-full" />
             </div>
-            <button class="btn btn-primary mt-2 rounded-full py-[14px] w-full">Get Bonus</button>
+            <button id="bonusBtn" class="btn btn-primary mt-2 rounded-full py-[14px] w-full">Get Bonus</button>
         </div>
     </div>
 
 
     <!-- Pay Bill -->
-     <div id="payBill" style="display: none;" class="max-w-lg mx-auto">
+     <div id="payBill" style="display: none;" class="max-w-lg mx-auto forms">
         <p class="mt-[25px] font-bold text-[18px] mb-5">Pay Bill</p>
         <div class="bg-white p-6  rounded-2xl">
             <div>
@@ -184,19 +184,19 @@
             <div>
                 <label class="text-[16px] font-semibold" for="">Biller Account Number</label>
                 <br>
-                <input id="ac_Number" required placeholder="Enter account number" class="input bg-[#f4f5f7] mt-2 mb-4 rounded-full p-5 w-full" />
+                <input id="BillAc_Number" required placeholder="Enter account number" class="input bg-[#f4f5f7] mt-2 mb-4 rounded-full p-5 w-full" />
             </div>
             <div>
                 <label class="text-[16px] font-semibold" for="">Amount to Pay</label>
                 <br>
-                <input id="add_money" placeholder="Add Amount to Pay" class="input bg-[#f4f5f7] mt-2 mb-4 rounded-full p-5 w-full" />
+                <input id="BillAdd_money" placeholder="Add Amount to Pay" class="input bg-[#f4f5f7] mt-2 mb-4 rounded-full p-5 w-full" />
             </div>
             <div>
                 <label class="text-[16px] font-semibold" for="">Pin Number</label>
                 <br>
-                <input id="Add_for_Pin" placeholder="Enter 3 digit pin number" class="input bg-[#f4f5f7] mt-2 mb-4 rounded-full p-5 w-full" />
+                <input id="BillAdd_for_Pin" placeholder="Enter 3 digit pin number" class="input bg-[#f4f5f7] mt-2 mb-4 rounded-full p-5 w-full" />
             </div>
-            <button id="home_btn" class="btn btn-primary mt-2 rounded-full py-[14px] w-full">Add Money</button>
+            <button id="BillButton" class="btn btn-primary mt-2 rounded-full py-[14px] w-full">Pay Now</button>
         </div>
     </div>
 
