@@ -372,6 +372,7 @@ document.getElementById('home_btn')
                 });
 
                 //transection_section
+                loadedData.reverse();
                 document.getElementById('transection')
                     .addEventListener('click',function(){
                         //console.log("trans_Connected")
@@ -383,8 +384,7 @@ document.getElementById('home_btn')
                         //console.log(loadedData);
                         AddContainer=document.getElementById('t_container');
                         AddContainer.innerText='';
-                        //console.log(AddContainer);
-                        loadedData.reverse();
+                        //console.log(AddContainer);SSS
                         for( i of loadedData){
                             const createDv=document.createElement('div');
 
