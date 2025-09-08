@@ -372,7 +372,7 @@ document.getElementById('home_btn')
                 });
 
                 //transection_section
-                loadedData.reverse();
+                
                 document.getElementById('transection')
                     .addEventListener('click',function(){
                         //console.log("trans_Connected")
@@ -381,11 +381,13 @@ document.getElementById('home_btn')
 
                         toggling('trans_form');
                         selectedBtn('transection');
+                        //loadedData.reverse;
                         //console.log(loadedData);
                         AddContainer=document.getElementById('t_container');
                         AddContainer.innerText='';
                         //console.log(AddContainer);SSS
-                        for( i of loadedData){
+                        //loadedData.reverse();
+                        for( let i=loadedData.length-1;i>=0;--i){
                             const createDv=document.createElement('div');
 
                             createDv.innerHTML=`
@@ -395,8 +397,8 @@ document.getElementById('home_btn')
                                         <img src="./assets/wallet1.png"  alt="">
                                     </div>
                                     <div class="ml-4">
-                                        <h1 class="font-semibold">${i.name}</h1>
-                                        <p>${i.dta}</p>
+                                        <h1 class="font-semibold">${loadedData[i].name}</h1>
+                                        <p>${loadedData[i].dta}</p>
                                     </div>
                                 </div>
 
