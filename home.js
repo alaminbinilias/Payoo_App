@@ -2,6 +2,8 @@
 
 // for button toggling
 
+loadedData=[];
+
 function toggling(id){
 
     allForms=document.getElementsByClassName('forms');
@@ -43,6 +45,14 @@ function ac(id){
     }
 }
 
+
+
+///for Logout Btn
+
+document.getElementById('logoutBtn')
+    .addEventListener('click',function(){
+        window.location.href='./index.html';
+    });
 
 // for Amount Function
 
@@ -105,7 +115,15 @@ document.getElementById('home_btn')
         }
         else{
             alert("Enter Your Correct Pin or A/C Number");
+            return;
         }
+
+        const data={
+                    name:'Add Money',
+                    dta:new Date().toLocaleTimeString() 
+                    };
+                    loadedData.push(data);
+                    //console.log(loadedData);
     });
 
 
@@ -198,6 +216,13 @@ document.getElementById('home_btn')
                     document.getElementById('withAmount').value="";
                     document.getElementById('withdrawPin').value="";
                 }
+
+                 const data={
+                    name:'Cash Out',
+                    dta:new Date().toLocaleTimeString() 
+                    };
+                    loadedData.push(data);
+                    //console.log(loadedData);
             });
 
             //Tranfer Money
@@ -245,6 +270,13 @@ document.getElementById('home_btn')
                         document.getElementById('Tamount').value='';
                         document.getElementById('Tpin').value="";
                     }
+
+                    const data={
+                    name:'Transfer Money',
+                    dta:new Date().toLocaleTimeString() 
+                    };
+                    loadedData.push(data);
+                    //console.log(loadedData);
 
                     });
                 });
@@ -325,6 +357,55 @@ document.getElementById('home_btn')
                         document.getElementById('BillAdd_money').value='';
                         document.getElementById('BillAdd_for_Pin').value="";
                     }
+
+                    const data={
+                    name:'Bill Pay',
+                    dta:new Date().toLocaleTimeString() 
+                    };
+                    loadedData.push(data);
+                    //console.log(loadedData);
+
+
+
                     });
                     
                 });
+
+                //transection_section
+                document.getElementById('transection')
+                    .addEventListener('click',function(){
+                        //console.log("trans_Connected")
+
+                        //toggling
+
+                        toggling('trans_form');
+                        selectedBtn('transection');
+                        //console.log(loadedData);
+                        AddContainer=document.getElementById('t_container');
+                        AddContainer.innerText='';
+                        //console.log(AddContainer);
+                        loadedData.reverse();
+                        for( i of loadedData){
+                            const createDv=document.createElement('div');
+
+                            createDv.innerHTML=`
+                            <div class=" bg-white flex items-center justify-between p-2 mb-3 rounded-xl">
+                                <div class="flex items-center bg-white">
+                                    <div class="ml-3 p-2 rounded-full bg-[#f4f5f7]">
+                                        <img src="./assets/wallet1.png"  alt="">
+                                    </div>
+                                    <div class="ml-4">
+                                        <h1 class="font-semibold">${i.name}</h1>
+                                        <p>${i.dta}</p>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <i class="fa-solid fa-ellipsis-vertical cursor-pointer"></i>
+                                </div>
+                            </div>
+                            `;
+                            AddContainer.appendChild(createDv);
+                        }
+                    });
+                
